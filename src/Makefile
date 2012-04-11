@@ -4,7 +4,7 @@ build:
 	g++ -o ctesting main.cpp
 
 cibuild: build winbuild-ci
-	mkdir ../build
+	mkdir -p ../build
 	cp ctesting ../build/ctesting-linux
 	cp ctesting.exe ../build/ctesting-win.exe
 	zip ../build-pkg.zip ../build
