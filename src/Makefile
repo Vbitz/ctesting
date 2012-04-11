@@ -6,4 +6,4 @@ build:
 cibuild: build winbuild
 	
 winbuild:
-	i586-mingw32msvc-cc -o ctesting.exe main.cpp
+	i586-mingw32msvc-c++ -o ctesting.exe main.cpp
