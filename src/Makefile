@@ -8,7 +8,6 @@ cibuild: build winbuild-ci
 	cp ctesting ../build/ctesting-linux
 	cp ctesting.exe ../build/ctesting-win.exe
 	cd ..
-	rm build-pkg.zip
 	zip -r build-pkg.zip build/
 	
 winbuild-local:
