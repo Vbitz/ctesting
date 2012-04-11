@@ -1,0 +1,28 @@
+<project name="projectX" default="hudson" basedir=".">
+    <description>
+        Hudson Ant file for TestingC
+    </description>
+  <!-- set global properties for this build -->
+  <property name="app" location="ctesting"/>
+  <property name="make.cmd" value="/usr/bin/make"/>
+  <property name="build.native" value="./src/"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+  </target>
+
+  <target name="compile"
+        description="compile the source" >
+    <exec dir="${build.native}" executable="${make.cmd}" failonerror="true">
+    </exec>
+  </target>
+
+  <target name="clean"
+        description="clean up" >
+    <exec dir="${build.native}" executable="${make.cmd}" failonerror="true">
+    <arg value="clean"/>
+    </exec>
+  </target>
+
+</project>
