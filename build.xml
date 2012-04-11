@@ -15,6 +15,7 @@
   <target name="compile"
         description="compile the source" >
     <exec dir="${build.native}" executable="${make.cmd}" failonerror="true">
+      <arg value="cibuild">
     </exec>
   </target>
 
